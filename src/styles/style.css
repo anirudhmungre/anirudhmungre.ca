@@ -2,28 +2,51 @@
     margin:     0;
     padding:    0;
 }
+
+html{
+    overflow-x: hidden;
+    font-family:'Roboto', sans-serif;
+}
+
 header{
     grid-area:  header;
     position:   sticky;
-    background: #3a3a3a;
+    background: #000000;
     text-align: left;
     padding:    20px;
+    top:        0;
+    left:       0;
+    width:      100%;
+    color:      #741212;
+    font-size:  30px;
 }
+
 main{
     grid-area:  main;
     text-align: center;
     padding:    20px 0;
     font-size:  30px;
+    height:     200vh;
 }
+
 footer{
     grid-area:  footer;
 }
+
 body{
     display:    grid;
     grid-template-areas:
-      'header header header header header header'
-      'menu main main main main main'
-      'menu footer footer footer footer footer';
+        'animation'
+        'header'
+        'main'
+        'footer';
     grid-gap:   10px;
     background: #1f1f1f;
+    width:      100%;
+}
+#myCanvas{
+    grid-area: animation;
+}
+#fname{
+    font-weight:bold;
 }
