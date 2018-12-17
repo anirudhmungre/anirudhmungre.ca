@@ -17,7 +17,7 @@ header{
     top:        0;
     left:       0;
     width:      100%;
-    color:      #741212;
+    color:      #af1717;
     font-size:  30px;
 }
 
@@ -48,5 +48,8 @@ body{
     grid-area: animation;
 }
 #fname{
-    font-weight:bold;
+    font-weight:800;
+}
+#lname{
+    font-weight:300;
 }
