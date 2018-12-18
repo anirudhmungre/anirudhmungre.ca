@@ -26,7 +26,7 @@ main{
     text-align: center;
     padding:    20px 0;
     font-size:  30px;
-    height:     200vh;
+    /* height:     200vh; */
 }
 
 footer{
