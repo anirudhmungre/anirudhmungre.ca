@@ -40,7 +40,7 @@ body{
         'header'
         'main'
         'footer';
-    grid-gap:   10px;
+    grid-gap:   0px;
     background: #1f1f1f;
     width:      100%;
 }
