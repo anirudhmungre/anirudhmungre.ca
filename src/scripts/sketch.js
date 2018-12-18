@@ -45,3 +45,8 @@ function mouseDragged() {
     for (let i = 0; i < 5; i++)
         flock.push(new Boid(mouseX,mouseY))
 }
+
+function mousePressed() {
+    for (let i = 0; i < 5; i++)
+        flock.push(new Boid(mouseX,mouseY))
+}
