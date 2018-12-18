@@ -1,41 +1,29 @@
 const headOffset = 89
-const title = "ANIRUDH MUNGRE"
+const title = "ANIRUDHMUNGRE"
 const fontSize = 150
-var font
+// var f    ont
 
 function preload(){
-    font = loadFont("../Resources/Roboto-Bold.ttf");
+    // font = loadFont("../resources/Roboto-Bold.ttf");
 }
 
 function setup(){
-    let myCanvas, bounds
+    let myCanvas//, bounds
     myCanvas = createCanvas(windowWidth, windowHeight-headOffset)
     myCanvas.parent("myCanvas")
-    textSize(fontSize)
-    textFont(font)
-    textColor()
-    bounds = font.textBounds(title)
+    textFont("Roboto")
+    textSize(windowWidth*0.07)
+    fill(175, 23, 23)
+    noStroke()
     textAlign(CENTER, CENTER)
-    text(title)
-    // setPoints()
+    text(title, windowWidth/2, windowHeight/2-headOffset)
 }
 
 function windowResized() {
-    clear()
     resizeCanvas(windowWidth, windowHeight - headOffset);
-    // setPoints()
+    textSize(windowWidth*0.07)
+    // fill(175, 23, 23)
+    noStroke()
+    textAlign(CENTER, CENTER)
+    text(title, windowWidth/2, windowHeight/2-headOffset)
 }
-
-// function setPoints(){
-//     let bounds, x, y, points, pt
-//     bounds = font.textBounds(title)
-//     x = windowWidth / 2 - bounds.w / 2
-//     y = windowHeight / 2 - bounds.h / 2 //- headOffset
-//     points = font.textToPoints(title, x, y, fontSize)
-//     for (let i = 0; i < points.length; i++){
-//         pt = points[i]
-//         stroke(175, 23, 23)
-//         strokeWeight(10)
-//         point(pt.x, pt.y)
-//     }
-// }
