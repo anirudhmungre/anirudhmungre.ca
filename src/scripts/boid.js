@@ -2,7 +2,8 @@ class Boid {
     constructor(x, y) {
         this.mass = random(1, 10)
         this.pos = createVector(x, y)
-        this.vel = p5.Vector.random2D()
+        this.vel = createVector(0, random(1, 4))//p5.Vector.random2D()
+        this.vel.rotate(random(7*PI/4, 2*PI))
         this.acc = createVector()
     }
 
@@ -28,7 +29,7 @@ class Boid {
 
     show(){
         strokeWeight(this.mass)
-        stroke(255)
+        stroke(random(0, 255), random(0, 255), random(0, 255))
         point(this.pos.x, this.pos.y)
     }
 }
