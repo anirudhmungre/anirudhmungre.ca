@@ -1,11 +1,17 @@
 class Boid {
     constructor(x, y) {
-        this.mass = random(1, 10)
         this.pos = createVector(x, y)
-        this.vel = createVector(0, random(1, 4))//p5.Vector.random2D()
-        this.vel.rotate(random(7*PI/4, 2*PI))
+        this.vel = p5.Vector.random2D()
+        this.vel.setMag(random(1, 4)) // All moving different speeds
         this.acc = createVector()
+        // Implement below later to be random
+        this.perception = 100
+        this.mass = 8
     }
+
+    // align(){
+
+    // }
 
     edges() {
         if (this.pos.x > windowWidth) {
@@ -28,8 +34,8 @@ class Boid {
     }
 
     show(){
-        strokeWeight(random(1, 20))//this.mass)
-        stroke(random(0, 255), random(0, 255), random(0, 255))
+        strokeWeight(this.mass)
+        stroke(255)//random(0, 255), random(0, 255), random(0, 255))
         point(this.pos.x, this.pos.y)
     }
 }
