@@ -11,6 +11,7 @@ function setup(){
     myCanvas.parent("myCanvas")
     flock = new Flock()
     textFont("Roboto")
+    fill(175, 23, 23)
     textSize(windowWidth*0.07)
     noStroke()
     textAlign(CENTER, CENTER)
@@ -27,9 +28,7 @@ function draw(){
 
     flock.run()
 
-    fill(175, 23, 23)
     stroke(31, 31, 31)
-    textAlign(CENTER, CENTER)
     text(title, windowWidth/2, windowHeight/2-headOffset)
 }
 

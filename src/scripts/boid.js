@@ -4,14 +4,41 @@ class Boid {
         this.vel = p5.Vector.random2D()
         this.vel.setMag(random(1, 4)) // All moving different speeds
         this.acc = createVector()
+        this.maxSpeed = 4
+        this.maxAlign = 1
         // Implement below later to be random
-        this.perception = 100
+        this.percepRad = 40
         this.mass = 8
     }
 
-    // align(){
+    flock(boids){
+        let steerForce = createVector()
+        this.acc = createVector(0, 0)
+        steerForce.add(this.align(boids))
 
-    // }
+        steerForce.div(this.mass)
+        this.acc.add(steerForce)
+    }
+
+    align(boids){
+        let dis, steerForce
+        let total = 0
+        steerForce = createVector()
+        for(let oBoid of boids){
+            dis = dist(this.pos.x, this.pos.y, oBoid.pos.x, oBoid.pos.y)
+            if ((oBoid != this) && (dis < this.percepRad)){
+                steerForce.add(oBoid.vel)
+                total++
+            }
+        }
+        if (total > 0){
+            steerForce.div(total)
+            steerForce.setMag(this.maxSpeed)
+            steerForce.sub(this.vel)
+            steerForce.limit(this.maxAlign)
+        }
+        return steerForce
+    }
 
     edges() {
         if (this.pos.x > windowWidth) {
