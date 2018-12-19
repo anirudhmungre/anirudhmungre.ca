@@ -13,7 +13,7 @@ function setup(){
     textFont("Roboto")
     textSize(windowWidth*0.07)
     fill(175, 23, 23)
-    noStroke()
+    // noStroke()
     textAlign(CENTER, CENTER)
     text(title, windowWidth/2, windowHeight/2-headOffset)
 }
@@ -22,7 +22,7 @@ function windowResized() {
     resizeCanvas(windowWidth, windowHeight - headOffset)
     textSize(windowWidth*0.07)
     // fill(175, 23, 23)
-    noStroke()
+    // noStroke()
     textAlign(CENTER, CENTER)
     text(title, windowWidth/2, windowHeight/2-headOffset)
 }
@@ -36,7 +36,7 @@ function draw(){
     })
 
     textSize(windowWidth*0.07)
-    noStroke()
+    // noStroke()
     textAlign(CENTER, CENTER)
     text(title, windowWidth/2, windowHeight/2-headOffset)
 }

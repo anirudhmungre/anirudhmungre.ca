@@ -28,7 +28,7 @@ class Boid {
     }
 
     show(){
-        strokeWeight(this.mass)
+        strokeWeight(random(1, 20))//this.mass)
         stroke(random(0, 255), random(0, 255), random(0, 255))
         point(this.pos.x, this.pos.y)
     }
