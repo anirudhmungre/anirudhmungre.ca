@@ -6,8 +6,12 @@ class Boid {
         this.acc = createVector()
         this.maxSpeed = 4
         this.maxForce = 1
+
+        this.alignWeight = 1.5
+        this.cohesionWeight = 1
+        this.seperationWeight = 1
         // Implement below later to be random
-        this.percepRad = 50
+        this.percepRad = random(20, 100)
         this.mass = 8
     }
 
@@ -32,12 +36,15 @@ class Boid {
         for(let oBoid of boids){
             dis = dist(this.pos.x, this.pos.y, oBoid.pos.x, oBoid.pos.y)
             if ((oBoid != this) && (dis < this.percepRad)){
+                dis = dist(this.pos.x, this.pos.y, oBoid.pos.x, oBoid.pos.y)
                 steerForceA.add(oBoid.vel)
 
                 steerForceC.add(oBoid.pos)
 
                 let diff = p5.Vector.sub(this.pos, oBoid.pos)
-                diff.div(dis)
+                if (dis > 0){
+                    diff.div(dis)
+                }
                 steerForceS.add(diff)
 
                 total++
@@ -61,9 +68,14 @@ class Boid {
             steerForceS.limit(this.maxForce)
         }
 
+        steerForceA.mult(this.alignWeight)
+        steerForceC.mult(this.cohesionWeight)
+        steerForceS.mult(this.seperationWeight)
+
         steerForceT.add(steerForceA)
         steerForceT.add(steerForceC)
         steerForceT.add(steerForceS)
+
         return steerForceT
     }
 
