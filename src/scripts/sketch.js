@@ -22,7 +22,7 @@ function setup(){
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight - headOffset)
     textSize(windowWidth*0.07)
-    b.position(windowWidth/2, windowHeight*0.005)
+    b.position(windowWidth/2 - 100, windowHeight*0.005)
 }
 
 function draw(){
@@ -54,6 +54,6 @@ function button(){
     b.parent('myCanvas')
     b.position(windowWidth/2 - 100, windowHeight*0.005)
     b.style("visibility: hidden;")
-    b.size(windowWidth*0.10, windowHeight*0.05)
+    b.size(200, windowHeight*0.05)
     b.mousePressed(newFlock)
 }
