@@ -1,17 +1,17 @@
 const headOffset = 79
-var flock;
+var flocks = []
+var i = 0
 
 function setup(){
     let myCanvas
     myCanvas = createCanvas(windowWidth, windowHeight - headOffset)
     myCanvas.parent("myCanvas")
-    flock = new Flock()
+    flocks.push(new Flock())
     textFont("Roboto")
     fill(175, 23, 23)
     textSize(windowWidth*0.07)
     // noStroke()
     textAlign(CENTER, CENTER)
-    // text(title, windowWidth/2, windowHeight/2-headOffset)
 }
 
 function windowResized() {
@@ -20,14 +20,19 @@ function windowResized() {
 }
 
 function draw(){
-    clear()
-    flock.run()
+    background(31, 31, 31)
+    flocks[i].run()
 }
 
 function mouseDragged() {
-    flock.addBoid(mouseX, mouseY)
+    flocks[i].addBoid(mouseX, mouseY)
 }
 
 function mousePressed() {
-    flock.addBoid(mouseX, mouseY)
+    flocks[i].addBoid(mouseX, mouseY)
+}
+
+function newFlock(){
+    flocks.push(new Flock())
+    i++
 }

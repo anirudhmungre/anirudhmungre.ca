@@ -1,5 +1,5 @@
 class Boid {
-    constructor(x, y) {
+    constructor(x, y, species) {
         this.pos = createVector(x, y)
         this.vel = p5.Vector.random2D()
         this.vel.setMag(4)//random(1, 4)) // All moving different speeds
@@ -11,6 +11,7 @@ class Boid {
         this.cohesionWeight = 1
         this.seperationWeight = 1
         // Implement below later to be random
+        this.species = species
         this.percepRad = random(20, 100)
         this.mass = 8
     }
@@ -166,7 +167,7 @@ class Boid {
 
     show(){
         strokeWeight(this.mass)
-        stroke(255)//random(0, 255), random(0, 255), random(0, 255))
+        stroke(this.species)//random(0, 255), random(0, 255), random(0, 255))
         point(this.pos.x, this.pos.y)
     }
 }

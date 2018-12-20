@@ -1,15 +1,15 @@
 class Flock{
     constructor(){
         this.boids = []
+        this.species = color(random(0, 255), random(0, 255), random(0, 255))
     }
 
     addBoid(x, y){
         // for (let i = 0; i < 5; i++)
-            this.boids.push(new Boid(x,y))
+        this.boids.push(new Boid(x,y, this.species))
     }
 
     run(){
-        // clear()
         for (let boid of this.boids){
             boid.flock(this.boids)
             boid.edges()
