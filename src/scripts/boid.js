@@ -4,7 +4,7 @@ class Boid {
         this.vel = p5.Vector.random2D()
         this.vel.setMag(random(1, 4)) // All moving different speeds
         this.acc = createVector()
-        this.maxSpeed = 3
+        this.maxSpeed = 5
         this.maxForce = 0.06
 
         this.aliWeight = 1
@@ -13,7 +13,7 @@ class Boid {
         // Implement below later to be random
         this.species = species
         this.percepRad = 50 //random(20, 100)
-        this.mass = 10
+        this.mass = 8
     }
 
     flock(boids){

@@ -5,7 +5,7 @@ class Flock{
     }
 
     addBoid(x, y){
-        this.boids.push(new Boid(x,y, this.species, b))
+        this.boids.push(new Boid(x,y, this.species))
     }
 
     run(){

@@ -50,7 +50,7 @@ function newFlock(){
 }
 
 function button(){
-    b = createButton('Add Flock')
+    b = createButton('Add Species')
     b.parent('myCanvas')
     b.position(windowWidth/2 - 100, windowHeight*0.005)
     b.style("visibility: hidden;")
