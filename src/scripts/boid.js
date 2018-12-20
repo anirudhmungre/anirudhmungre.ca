@@ -1,19 +1,19 @@
 class Boid {
-    constructor(x, y, species) {
+    constructor(x, y, maxSpeed, mass, percepRad) {
         this.pos = createVector(x, y)
         this.vel = p5.Vector.random2D()
         this.vel.setMag(random(1, 4)) // All moving different speeds
         this.acc = createVector()
-        this.maxSpeed = 5
-        this.maxForce = 0.06
+        this.maxSpeed = maxSpeed
+        this.maxForce = 0.05
 
         this.aliWeight = 1
         this.cohWeight = 1
-        this.sepWeight = 3
+        this.sepWeight = 2
         // Implement below later to be random
-        this.species = species
-        this.percepRad = 50 //random(20, 100)
-        this.mass = 8
+        // this.species = species
+        this.percepRad = percepRad //random(20, 100)
+        this.mass = mass
     }
 
     flock(boids){
@@ -38,7 +38,7 @@ class Boid {
         steerForce = createVector()
         for(let oBoid of boids){
             dis = p5.Vector.dist(this.pos, oBoid.pos)
-            if ((oBoid != this) && (dis < this.percepRad)){
+            if ((dis > 0) && (dis < this.percepRad)){
                 avgVel.add(oBoid.vel)
                 total++
             }
@@ -59,7 +59,7 @@ class Boid {
         steerForce = createVector()
         for(let oBoid of boids){
             dis = dist(this.pos.x, this.pos.y, oBoid.pos.x, oBoid.pos.y)
-            if ((oBoid != this) && (dis < this.percepRad)){
+            if ((dis > 0) && (dis < this.percepRad)){
                 steerForce.add(oBoid.pos)
                 total++
             }
@@ -81,7 +81,7 @@ class Boid {
         steerForce = createVector()
         for(let oBoid of boids){
             dis = p5.Vector.dist(this.pos, oBoid.pos)
-            if ((oBoid != this) && (dis < desiredSep)){
+            if ((dis > 0) && (dis < desiredSep)){
                 let diff = p5.Vector.sub(this.pos, oBoid.pos)
                 diff.normalize()
                 diff.div(dis)
@@ -133,7 +133,7 @@ class Boid {
         this.acc.mult(0)
     }
 
-    show(){
+    show(species){
         // Particle Shape
         // strokeWeight(this.mass)
         // stroke(this.species)//random(0, 255), random(0, 255), random(0, 255))
@@ -152,7 +152,7 @@ class Boid {
 
         // Arrow Shape
         let theta = this.vel.heading() + radians(90);
-        fill(this.species);
+        fill(species);
         stroke(200);
         push();
         translate(this.pos.x,this.pos.y);

@@ -2,10 +2,13 @@ class Flock{
     constructor(){
         this.boids = []
         this.species = color(random(0, 255), random(0, 255), random(0, 255))
+        this.mass = random(2, 10)
+        this.maxSpeed = 20/this.mass
+        this.perceptionRadius = random(50, 100)
     }
 
     addBoid(x, y){
-        this.boids.push(new Boid(x,y, this.species))
+        this.boids.push(new Boid(x,y, this.maxSpeed, this.mass, this.perceptionRadius))
     }
 
     run(){
@@ -13,7 +16,7 @@ class Flock{
             boid.flock(this.boids)
             boid.edges()
             boid.update()
-            boid.show()
+            boid.show(this.species)
         }
 
         if (this.boids.length > 0){
