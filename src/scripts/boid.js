@@ -5,7 +5,7 @@ class Boid {
         this.vel.setMag(random(1, 4)) // All moving different speeds
         this.acc = createVector()
         this.maxSpeed = maxSpeed
-        this.maxForce = 0.05
+        this.maxForce = 0.1
 
         this.aliWeight = 1
         this.cohWeight = 1
