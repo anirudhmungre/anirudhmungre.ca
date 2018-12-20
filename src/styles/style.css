@@ -53,3 +53,20 @@ body{
 #lname{
     font-weight:300;
 }
+
+button{
+    border: 2px solid #af1717; 
+    background: transparent; 
+    width: 100px;
+    color: black; 
+    font-weight: strong; 
+    font-size: windowHeight*0.04 + "px";
+    color: #af1717;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+button:hover{
+    background: #8b1313;
+    color: #1f1f1f;
+}
