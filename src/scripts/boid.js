@@ -10,8 +10,7 @@ class Boid {
         this.aliWeight = 1
         this.cohWeight = 1
         this.sepWeight = 2
-        // Implement below later to be random
-        // this.species = species
+
         this.percepRad = percepRad //random(20, 100)
         this.mass = mass
     }
@@ -20,7 +19,7 @@ class Boid {
         let sep = this.seperation(boids)   // Separation
         let ali = this.align(boids)      // Alignment
         let coh = this.cohesion(boids)   // Cohesion
-        // Arbitrarily weight these forces
+
         ali.mult(this.aliWeight)
         coh.mult(this.cohWeight)
         sep.mult(this.sepWeight)
@@ -30,6 +29,8 @@ class Boid {
         this.acc.add(coh)
         this.acc.add(sep)
     }
+
+
 
     align(boids){
         let dis, avgVel, steerForce

@@ -73,6 +73,13 @@ body{
     background: #af1717;
 }
 
+h1{
+    color: #af1717;
+}
+p{
+    color: white;
+}
+
 button{
     border: 2px solid #af1717; 
     background: transparent; 
