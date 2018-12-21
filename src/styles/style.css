@@ -26,7 +26,6 @@ main{
     text-align: center;
     padding:    20px 0;
     font-size:  30px;
-    /* height:     200vh; */
 }
 
 footer{
@@ -52,6 +51,26 @@ body{
 }
 #lname{
     font-weight:300;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid #af1717;
+    border-radius: 20px;
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #af1717;
 }
 
 button{
