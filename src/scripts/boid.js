@@ -119,7 +119,7 @@ class Boid {
         else if (this.pos.x < 0) {
             this.pos.x = windowWidth
         }
-        if (this.pos.y > windowHeight) {
+        if (this.pos.y > windowHeight - headOffset) {
             this.pos.y = 0
         } 
         else if (this.pos.y < 0) {
@@ -152,18 +152,18 @@ class Boid {
         // fill(175, 23, 23)
 
         // Arrow Shape
-        let theta = this.vel.heading() + radians(90);
-        fill(species);
-        stroke(200);
-        push();
-        translate(this.pos.x,this.pos.y);
-        rotate(theta);
-        beginShape();
-        vertex(0, -this.mass*2);
-        vertex(-this.mass, this.mass*2);
-        vertex(this.mass, this.mass*2);
-        endShape(CLOSE);
-        pop();
+        let theta = this.vel.heading() + radians(90)
+        fill(species)
+        stroke(200)
+        push()
+        translate(this.pos.x,this.pos.y)
+        rotate(theta)
+        beginShape()
+        vertex(0, -this.mass*2)
+        vertex(-this.mass, this.mass*2)
+        vertex(this.mass, this.mass*2)
+        endShape(CLOSE)
+        pop()
         fill(175, 23, 23)
     }
 }
