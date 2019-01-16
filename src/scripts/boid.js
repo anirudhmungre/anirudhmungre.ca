@@ -5,7 +5,7 @@ class Boid {
         this.vel.setMag(random(1, 4)) // All moving different speeds
         this.acc = createVector()
         this.maxSpeed = maxSpeed
-        this.maxForce = 0.1
+        this.maxForce = 0.5
 
         this.aliWeight = 1
         this.cohWeight = 1
@@ -24,10 +24,9 @@ class Boid {
         coh.mult(this.cohWeight)
         sep.mult(this.sepWeight)
 
-        // steerForce.div(this.mass)
-        this.acc.add(ali)
-        this.acc.add(coh)
-        this.acc.add(sep)
+        this.acc.add(ali.div(this.mass))
+        this.acc.add(coh.div(this.mass))
+        this.acc.add(sep.div(this.mass))
     }
 
 
@@ -123,7 +122,7 @@ class Boid {
             this.pos.y = 0
         } 
         else if (this.pos.y < 0) {
-            this.pos.y = windowHeight
+            this.pos.y = windowHeight - headOffset
         }
     }    
 
@@ -154,7 +153,8 @@ class Boid {
         // Arrow Shape
         let theta = this.vel.heading() + radians(90)
         fill(species)
-        stroke(200)
+        stroke(1)
+        strokeWeight(1)
         push()
         translate(this.pos.x,this.pos.y)
         rotate(theta)
