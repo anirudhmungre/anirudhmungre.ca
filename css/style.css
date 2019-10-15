@@ -1,0 +1,66 @@
+header, main, footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
+.icon-box {
+    border: 1px solid #eee;
+    padding: 100px;
+    position: relative;
+    width:200px;
+}
+.icon-box:before {
+    content: 'Hover to see animation.';
+    bottom: 5px;
+    display: block;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.icon-box:hover .circle {
+    animation: circle-animation 0.5s ease-out forwards;
+}
+.icon-box:hover .checkmark {
+    animation: checkmark-animation 1s ease-out forwards;
+    animation-delay: 0.25s;
+}
+#my-icon .circle {
+    opacity: 0;
+    transform: scale(0.9);
+    transform-origin: center;
+}
+#my-icon .checkmark {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transform-origin: center;
+    stroke: #cfd8dc;
+}
+@keyframes circle-animation {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes checkmark-animation {
+    40% {
+        transform: scale(1);
+    }
+    55% {
+        stroke: #cfd8dc;
+        transform: scale(1.2);
+    }
+    70% {
+        transform: scale(1);
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: scale(1);
+        stroke: #21b587;
+    }
+}
