@@ -5,7 +5,7 @@ let headerNav = document.getElementById("header-nav");
 let content = document.getElementById("content");
 
 const start = () => {
-    headerMinimumDimension = window.innerWidth < 500 ? 50 : 100;
+    headerMinimumDimension = window.innerWidth < 750 ? 70 : 100;
     headerImage.style.height = `${window.innerHeight}px`;
     headerImage.style.width = `${window.width}px`;
     headerNav.style.height = `${headerMinimumDimension * 0.6}px`;
