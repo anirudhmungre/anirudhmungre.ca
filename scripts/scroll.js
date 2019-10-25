@@ -38,10 +38,10 @@ const resetDistances = () => {
     }
     headerImage.style.borderBottomLeftRadius = 50 / window.innerHeight * amountScrolled > 50 ? "50%" : `${50 / window.innerHeight * amountScrolled}%`;
     headerImage.style.borderBottomRightRadius = 50 / window.innerHeight * amountScrolled > 50 ? "50%" : `${50 / window.innerHeight * amountScrolled}%`;
-    headerImage.style.height = ((window.innerHeight - amountScrolled) < headerMinimumDimension)
-        ? `${headerMinimumDimension}px` : `${window.innerHeight - amountScrolled}px`;
-    headerImage.style.width = ((window.innerWidth - amountScrolled * (window.innerWidth / window.innerHeight)) < headerMinimumDimension)
-        ? `${headerMinimumDimension}px` : `${window.innerWidth - amountScrolled * (window.innerWidth / window.innerHeight)}px`;
+    headerImage.style.height = window.innerHeight - (window.innerHeight * (amountScrolled / (window.innerHeight - headerMinimumDimension))) < headerMinimumDimension
+        ? `${headerMinimumDimension}px` : `${window.innerHeight - (window.innerHeight * (amountScrolled / (window.innerHeight - headerMinimumDimension)))}px`;
+    headerImage.style.width = window.innerWidth - window.innerWidth * (amountScrolled / (window.innerHeight-headerMinimumDimension)) < headerMinimumDimension
+        ? `${headerMinimumDimension}px` : `${window.innerWidth - (window.innerWidth * (amountScrolled / (window.innerHeight-headerMinimumDimension)))}px`;
     content.style.marginTop = amountScrolled + headerImage.offsetHeight > window.innerHeight ? content.style.marginTop : `${amountScrolled + headerImage.offsetHeight}px`;
 };
 
