@@ -1,0 +1,84 @@
+button {
+    all: unset;
+}
+
+/* ABOVE TO REMOVE ALL BUTTON STYLING */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    height: 100000px;
+}
+
+#header-image {
+    position: fixed;
+    top: 0;
+    transform: translate(-50%, 0%);
+    left: 50%;
+
+    background-image: url("../assets/stairs.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+#header-nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    background-color: darkslategrey;
+    visibility: hidden;
+    text-align: center;
+}
+
+#header-nav > div {
+    height: 100%;
+    width: 50%;
+}
+
+/* .left { 
+    margin-left: 5vw;
+    text-align: left; 
+}
+.right { 
+    margin-right: 5vw;
+    text-align: right; 
+} */
+
+#header-nav > div > button {
+    width: 35%;
+    height: 100%;
+} 
+
+.animate-nav-in {
+    visibility: visible !important;
+    animation: nav-in 0.5s forwards !important;
+}
+
+.animate-nav-out {
+    visibility: visible !important;
+    animation: nav-out 0.5s forwards !important;
+}
+
+@keyframes nav-in {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes nav-out {
+    from {
+        transform: scaleX(1);
+    }
+    to {
+        transform: scaleX(0);
+    }
+}
