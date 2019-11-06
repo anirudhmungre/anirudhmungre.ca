@@ -1,4 +1,6 @@
- 
 let myFullpage = new fullpage('#fullpage', {
-    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke']
+    sectionsColor: ['#212121', '#121212', '#212121', '#121212']
 });
+
+let scene = document.getElementById('scene');
+let parallaxInstance = new Parallax(scene);
