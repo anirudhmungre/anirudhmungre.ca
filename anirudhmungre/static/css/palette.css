@@ -29,5 +29,5 @@ $color5: rgba(132, 153, 177, 1);
 }
 
 ::-webkit-scrollbar {
-    width: 1px;
+    width: 0px;
 }

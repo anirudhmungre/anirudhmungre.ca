@@ -1,5 +1,5 @@
 const doneLoading = () => {
-    document.getElementsByClassName('loader').style.visibility = "hidden";
+    document.querySelector('#loader').style.display = "none";
 }
 
 let scene = document.getElementById('scene');
@@ -7,7 +7,7 @@ let parallaxInstance = new Parallax(scene, {
     relativeInput: true,
     hoverOnly: true,
     invertX: false,
-    invertY: false,
-    onReady: doneLoading()
+    invertY: false
 });
-document.getElementsByClassName('loader').visibility = "hidden";
+
+window.addEventListener('load', doneLoading);
