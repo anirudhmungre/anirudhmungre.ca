@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anirudh Mungre</title>
+
+    <link rel="color palette" href="{{ url_for('static', filename='css/palette.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mountains.css') }}">
+</head>
+
+<body>
+    <div id="loader"></div>
+    <div id="scene" class="main">
+        <div class="mountain img09" data-depth="0.55"></div>
+        <div class="mountain img08" data-depth="0.5"></div>
+        <div class="mountain img07" data-depth="0.45"></div>
+        <div class="mountain img06" data-depth="0.4"></div>
+        <div class="mountain img05" data-depth="0.35"></div>
+        <div class="mountain img04" data-depth="0.3"></div>
+        <div class="mountain img03" data-depth="0.25"></div>
+        
+        <div class="mountain img02" data-depth="0.15"></div>
+        <div class="mountain img01" data-depth="0.1"></div>
+    </div>
+    <div class="title">
+        <div>
+            <span class="outlined">Anirudh</span>Mungre
+        </div>
+    </div>
+    <p style="height: 100vh;"></p>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="{{ url_for('static', filename='js/mountains.js') }}"></script>
+</body>
+
+</html>
