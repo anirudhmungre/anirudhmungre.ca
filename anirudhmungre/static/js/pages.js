@@ -1,5 +1,6 @@
+
 new fullpage('#fullpage', {
-	licenseKey: '&f4EvOW@f6',
+	licenseKey: fullpageApiKey,
 	scrollHorizontally: true,
 	lazyLoading: true,
 	

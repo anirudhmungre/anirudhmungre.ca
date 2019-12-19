@@ -14,4 +14,4 @@ app.config.from_envvar('APP_CONFIG_FILE')
 
 @app.route('/', methods=['GET'])
 def main():
-    return render_template('index.html')
+    return render_template('index.html', FULLPAGE_API_KEY=app.config['FULLPAGE_API_KEY'])
