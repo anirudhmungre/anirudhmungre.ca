@@ -1,5 +1,3 @@
-*.pyc
-instance/
 start.sh
 *lock.json
 node_modules/

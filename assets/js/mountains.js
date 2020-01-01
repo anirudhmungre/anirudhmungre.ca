@@ -1,3 +1,5 @@
+// const { Parallax } = require('parallax-js');
+
 const doneLoading = () => {
     document.querySelector('#loader').style.display = "none";
 }

@@ -3,9 +3,9 @@
 
 body {
     margin: 0;
-    background-color: var(--background-color);
+    background-color: var(--background);
     font-family: 'Roboto', sans-serif;
-    color: var(--primary-color);
+    color: var(--primary);
 }
 
 .loader {
@@ -22,15 +22,23 @@ body {
     background-color: black;
 }
 
-.main {
-    position: absolute;
-    width: 100%;
+.header {
+    position: relative;
     height: 100%;
+    touch-action: none;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.scene-container {
+    width: 100vw;
+    height: 100vh;
 }
 
 .title {
     font-size: 5.7em;
-    color: var(--accent-color);
+    color: var(--primary-variant);
+    /* color: var(--tech-tangerine); */
 
     position: absolute;
     top: 48% !important;
@@ -38,9 +46,10 @@ body {
     transform: translate(-50%, -50%) !important;
 }
 
-@supports (-webkit-text-stroke: 1px var(--accent-color)) {
+@supports (-webkit-text-stroke: 1px var(--primary)) {
     .outlined {
-        -webkit-text-stroke: 1px var(--accent-color);
+        -webkit-text-stroke: 1px var(--primary);
+        /* -webkit-text-stroke: 3px var(--future-blue); */
         -webkit-text-fill-color: transparent;
     }
 }
