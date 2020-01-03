@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anirudh Mungre</title>
 
+    <link rel="stylesheet" href="assets/css/mountains.css">
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/info.css">
 </head>
 
 <body>
@@ -16,13 +18,14 @@
     </div>
     <div class="header">
         <div id="scene" class="scene-container">
-            <div class="mountain-container" data-depth="0.25"><div class="mountain img09"></div></div>
-            <div class="mountain-container" data-depth="0.20"><div class="mountain img08"></div></div>
-            <div class="mountain-container" data-depth="0.20"><div class="mountain img07"></div></div>
+            <canvas id="stars" class="mountain-container" data-depth="0"><h1>HI THERE</h1></canvas>
+            <div class="mountain-container" data-depth="0.25"><div class="mountain img09 fog"></div></div>
+            <div class="mountain-container" data-depth="0.20"><div class="mountain img08 fog"></div></div>
+            <div class="mountain-container" data-depth="0.20"><div class="mountain img07 fog"></div></div>
             <div class="mountain-container" data-depth="0.15"><div class="mountain img06"></div></div>
-            <div class="mountain-container" data-depth="0.15"><div class="mountain img05"></div></div>
+            <div class="mountain-container" data-depth="0.15"><div class="mountain img05 fog"></div></div>
             <div class="mountain-container" data-depth="0.1"><div class="mountain img04"></div></div>
-            <div class="mountain-container" data-depth="0.1"><div class="mountain img03"></div></div>
+            <div class="mountain-container" data-depth="0.1"><div class="mountain img03 fog"></div></div>
             <div class="title">
                 <div>
                     <span class="outlined">Anirudh</span><span>Mungre</span>
@@ -32,11 +35,13 @@
             <div class="mountain-container" data-depth="0.05"><div class="mountain img01"></div></div>
         </div>
     </div>
-    <div>
-
+    <div id="about" class="info">
+        <h2 style="margin: 0; padding: 0;">Who Am I</h2>
     </div>
     
     <script src="node_modules/parallax-js/dist/parallax.min.js"></script>
+    <script src="node_modules/p5/lib/p5.min.js"></script>
+    <script src="assets/js/sketch.js"></script>
     <script src="assets/js/mountains.js"></script>
 </body>
 

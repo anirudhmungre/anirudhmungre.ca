@@ -1,7 +1,12 @@
+canvas {
+    display: block;
+    width:500px;
+    height:500px;
+}
+
 .mountain-container {
     width: 100%;
     height: 100vh;
-    overflow: visible;
 }
 
 .mountain {
@@ -12,8 +17,12 @@
     background-size: cover;
     transform: translateX(-5%);
 
-    /* filter: brightness(3.2); */
-    /* filter: brightness(1); */
+    filter: brightness(3.2);
+    filter: brightness(1);
+}
+
+.fog {
+    filter: brightness(0.6);
 }
 
 .img01 { background-image: url('../img/img_home-top_01.png'); }

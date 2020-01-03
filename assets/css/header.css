@@ -1,9 +1,8 @@
 @import 'palette.css';
-@import 'mountains.css';
 
 body {
     margin: 0;
-    background-color: var(--background);
+    
     font-family: 'Roboto', sans-serif;
     color: var(--primary);
 }
@@ -24,10 +23,11 @@ body {
 
 .header {
     position: relative;
-    height: 100%;
+    height: 100vh;
     touch-action: none;
     width: 100vw;
     overflow: hidden;
+    background: linear-gradient(var(--surface) 30%,#1a279c);
 }
 
 .scene-container {

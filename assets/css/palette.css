@@ -23,8 +23,8 @@ $color5: rgba(132, 153, 177, 1);
 :root {
     --background: #ffffff;
     --surface: #ffffff;
-    --primary: #2c4ab2;
-    --primary-variant: #002486;
+    --primary: #e0bd21;
+    --primary-variant: #e0bd21;
     --secondary: #03dac6;
     --secondary-variant: #018786;
     --error: #b00020;
@@ -39,8 +39,8 @@ $color5: rgba(132, 153, 177, 1);
 :root {
     --background: #121212;
     --surface: #121212;
-    --primary: #03dac6;
-    --primary-variant: #018786;
+    --primary: #e0bd21;
+    --primary-variant: #e0bd21;
     --secondary: #03dac6;
     --secondary-variant: #018786;
     --error: #e84853;
@@ -51,7 +51,7 @@ $color5: rgba(132, 153, 177, 1);
     --on-secondary: #000000;
     --on-error: #ffffff;
 }
-
+/* e0bd21 */
 /* :root {
     --future-blue: #003c71;
     --simcoe-blue: #0077ca;
