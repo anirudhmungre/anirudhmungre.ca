@@ -1,18 +1,22 @@
-var starfield = [];
+var sky;
+
+function initSky() {
+	const NUM_STARS = Math.floor(windowWidth / 2);
+	sky = new Sky(NUM_STARS);
+}
 
 function setup() {
 	let canvas = createCanvas(windowWidth, windowHeight);
-	canvas.parent('stars');
+	canvas.parent('sky');
+	initSky();
+}
 
-	for (let i = 0; i < 400; i++) {
-		starfield.push(new Star());
-	}
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+	initSky();
 }
 
 function draw() {
 	clear();
-	starfield.forEach(star => {
-		star.update();
-		star.show();
-	});
+	sky.refresh();
 }

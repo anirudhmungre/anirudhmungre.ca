@@ -13,7 +13,7 @@ class Star {
 		this.twinkleSize = this.size + sin(this.t) * 2;
     }
 
-    show() {
+    draw() {
         noStroke();
         fill(255);
         ellipse(this.x, this.y, this.twinkleSize, this.twinkleSize);
