@@ -141,7 +141,7 @@ class Boid {
 
         // Cat Shape
         // noStroke();
-		// fill(this.species);
+		// fill(species);
 		// ellipse(this.pos.x, this.pos.y, 20, 20);
 		// triangle(this.pos.x - 10, this.pos.y - 15, this.pos.x - 10, this.pos.y, this.pos.x - 2, this.pos.y - 10);
 		// triangle(this.pos.x + 10, this.pos.y - 15, this.pos.x + 10, this.pos.y, this.pos.x + 2, this.pos.y - 10);

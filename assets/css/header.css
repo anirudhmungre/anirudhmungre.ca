@@ -27,7 +27,7 @@ body {
     touch-action: none;
     width: 100vw;
     overflow: hidden;
-    background: linear-gradient(var(--surface) 30%,#1a279c);
+    background: linear-gradient(var(--surface) 35%,#1a279c, var(--surface));
 }
 
 .scene-container {
