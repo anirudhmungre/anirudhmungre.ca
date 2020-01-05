@@ -1,7 +1,10 @@
 class Sky {
     constructor(numStars) {
         this.stars = this.initStars(numStars);
-        this.comet = new Comet;
+        this.comet;
+
+        var t = this;
+        setInterval(function() { t.initComet(); }, 10000);
     }
 
     initStars(numStars) {
@@ -10,6 +13,11 @@ class Sky {
             stars.push(new Star());
         }
         return stars;
+    }
+
+    initComet() {
+        delete this.comet;
+        this.comet = new Comet(random(100, 120));
     }
 
     refresh() {
@@ -21,11 +29,13 @@ class Sky {
         this.stars.forEach(star => {
             star.update();
         });
+        if (this.comet) { this.comet.update(); }
     }
 
     draw() {
         this.stars.forEach(star => {
             star.draw();
         });
+        if(this.comet) { this.comet.draw(); }
     }
 }

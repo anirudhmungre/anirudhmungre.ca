@@ -6,7 +6,7 @@ function initSky() {
 }
 
 function setup() {
-	let canvas = createCanvas(windowWidth, windowHeight);
+	let canvas = createCanvas(windowWidth, 3*windowHeight/4);
 	canvas.parent('sky');
 	initSky();
 }
