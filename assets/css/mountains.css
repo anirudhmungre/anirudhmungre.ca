@@ -16,13 +16,11 @@ canvas {
     background-position: center;
     background-size: cover;
     transform: translateX(-5%);
-
-    filter: brightness(3.2);
-    filter: brightness(1);
+    /* filter: brightness(1); */
 }
 
 .fog {
-    filter: brightness(0.6);
+    filter: brightness(0.5);
 }
 
 .img01 { background-image: url('../img/img_home-top_01.png'); }

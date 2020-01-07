@@ -12,7 +12,7 @@ function setup() {
 }
 
 function windowResized() {
-	resizeCanvas(windowWidth, windowHeight);
+	resizeCanvas(windowWidth, 3*windowHeight/4);
 	initSky();
 }
 

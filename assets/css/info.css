@@ -3,8 +3,3 @@
 .info {
     padding: 10vw;
 }
-
-#about {
-    background: linear-gradient(#202020, var(--background)); 
-    height: 10000px;
-}
