@@ -1,6 +1,5 @@
 let d = new Date();
 let hour = d.getHours();
-let newHour = d.getHours();
 
 const changeGradient = (index) => {
     document.getElementById('sky').style.opacity = mountainConfig[index]['opacity'];
@@ -13,11 +12,11 @@ const changeGradient = (index) => {
 };
 
 const currentTime = () => {
-    // let d = new Date();
-    // let newHour = d.getHours();
+    d = new Date();
+    let newHour = d.getHours();
     if (newHour !== hour) {
         // REMOVE THIS LATER FOR TESTING ONLY
-        newHour = newHour > 24 ? 0 : newHour;
+        // newHour = newHour >= 24 ? 0 : newHour;
 
         hour = newHour;
         changeGradient(hour);
