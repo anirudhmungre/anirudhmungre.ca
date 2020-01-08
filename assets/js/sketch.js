@@ -1,22 +1,25 @@
-var sky;
+const sketch2d = (p) => {
+	var sky;
 
-function initSky() {
-	const NUM_STARS = Math.floor(windowWidth / 2);
-	sky = new Sky(NUM_STARS);
-}
+	const initSky = () => {
+		const NUM_STARS = Math.floor(p.windowWidth / 2);
+		sky = new Sky(p, NUM_STARS);
+	};
 
-function setup() {
-	let canvas = createCanvas(windowWidth, 3*windowHeight/4);
-	canvas.parent('sky');
-	initSky();
-}
+	p.setup = () => {
+		p.createCanvas(p.windowWidth, 3 * p.windowHeight / 4);
+		initSky();
+	}
 
-function windowResized() {
-	resizeCanvas(windowWidth, 3*windowHeight/4);
-	initSky();
-}
+	p.windowResized = () => {
+		p.resizeCanvas(p.windowWidth, 3 * p.windowHeight / 4);
+		initSky();
+	}
 
-function draw() {
-	clear();
-	sky.refresh();
-}
+	p.draw = () => {
+		p.clear();
+		sky.refresh();
+	}
+};
+
+new p5(sketch2d, 'sky');

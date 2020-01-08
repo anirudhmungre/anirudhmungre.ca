@@ -1,6 +1,7 @@
 class Comet {
-    constructor(maxWidth) {
-        this.maxWidth = maxWidth;
+    constructor(p5) {
+        this.p5 = p5;
+        this.maxWidth = this.p5.random(100, 120);
         this.height = 1;
         this.shootSpeed = 9;
         this.fadeSpeed = 10;
@@ -18,11 +19,11 @@ class Comet {
     resetMovement() {
         this.width = 0;
         this.alpha = 255;
-        this.rotation = random(-HALF_PI/4, -HALF_PI/2);
-        this.x = random(width);
-        this.y = random(height/4);
-        this.vx = this.shootSpeed * cos(this.rotation)/2;
-        this.vy = this.shootSpeed * sin(this.rotation)/2;
+        this.rotation = this.p5.random(-this.p5.HALF_PI/4, -this.p5.HALF_PI/2);
+        this.x = this.p5.random(this.p5.width);
+        this.y = this.p5.random(this.p5.height/4);
+        this.vx = this.shootSpeed * this.p5.cos(this.rotation)/2;
+        this.vy = this.shootSpeed * this.p5.sin(this.rotation)/2;
     }
 
     update() {
@@ -36,10 +37,10 @@ class Comet {
     }
 
     draw() {
-        noStroke();        
-        translate(this.x, this.y);
-        rotate(this.rotation);
-        fill(255, this.alpha);
-        ellipse(0, 0, this.width, this.height);
+        this.p5.noStroke();        
+        this.p5.translate(this.x, this.y);
+        this.p5.rotate(this.rotation);
+        this.p5.fill(255, this.alpha);
+        this.p5.ellipse(0, 0, this.width, this.height);
     }
 }

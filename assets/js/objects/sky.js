@@ -1,5 +1,6 @@
 class Sky {
-    constructor(numStars) {
+    constructor(p5, numStars) {
+        this.p5 = p5;
         this.stars = this.initStars(numStars);
         this.comet;
 
@@ -10,14 +11,14 @@ class Sky {
     initStars(numStars) {
         let stars = [];
         for (let i = 0; i < numStars; i++) {
-            stars.push(new Star());
+            stars.push(new Star(this.p5));
         }
         return stars;
     }
 
     initComet() {
         delete this.comet;
-        this.comet = new Comet(random(100, 120));
+        this.comet = new Comet(this.p5);
     }
 
     refresh() {
