@@ -27,6 +27,9 @@ body {
     touch-action: none;
     width: 100vw;
     overflow: hidden;
+
+    display: flex;
+    justify-content: center;
 }
 
 .scene-container {
@@ -49,10 +52,40 @@ body {
     text-shadow: 0px 0px 20px 20px #121212;
 }
 
+.links {
+    color: var(--primary-variant);
+    /* color: var(--tech-tangerine); */
+
+    position: absolute;
+    bottom: 5% !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links>a {
+    margin: 20px;
+    color: inherit;
+}
+
+.links>a:hover {
+        transform: scale(1.5);
+}
+
 @supports (-webkit-text-stroke: 1px var(--primary)) {
     .outlined {
         -webkit-text-stroke: 1px var(--primary);
         /* -webkit-text-stroke: 3px var(--future-blue); */
         -webkit-text-fill-color: transparent;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .title { 
+      top: 43% !important;
+    }
+
+    .title>div {
+      display: flex;
+      flex-direction: column;
     }
 }

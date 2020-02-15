@@ -17,7 +17,7 @@ var mountainConfig = [
     {"opacity": "0", "brightness": "brightness(3.8)" , "gradient": "linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%)"},
     
     {"opacity": "0", "brightness": "brightness(3.9)" , "gradient": "linear-gradient(to bottom, #57c1eb 0%,#246fa8 100%)"},
-    {"opacity": "0", "brightness": "brightness(4)" , "gradient": "linear-gradient(to bottom, #2d91c2 0%,#1e528e 100%)"},
+    {"opacity": "0", "brightness": "brightness(3.5)" , "gradient": "linear-gradient(to bottom, #2d91c2 0%,#1e528e 100%)"},
     {"opacity": "0", "brightness": "brightness(3)" , "gradient": "linear-gradient(to bottom, #2473ab 0%,#1e528e 70%,#5b7983 100%)"},
     // {"opacity": "0.1", "brightness": "brightness(2.2)" , "gradient": "linear-gradient(to bottom, #1e528e 0%,#265889 50%,#9da671 100%)"},
     {"opacity": "0.2", "brightness": "brightness(2)" , "gradient": "linear-gradient(to bottom, #1e528e 0%,#728a7c 50%,#e9ce5d 100%)"},
