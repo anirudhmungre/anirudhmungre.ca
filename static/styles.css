@@ -1,0 +1,15 @@
+:root {
+  --accent: slategray;
+  --accent-dark: darkslategray;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes visible-text-color-change {
+  0% { color: var(--accent-dark); }
+  50% { color: var(--accent); }
+  100% { color: var(--accent-dark); }
+}
